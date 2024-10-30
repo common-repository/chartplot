@@ -1,0 +1,568 @@
+{
+    "chart": {
+        "dataset": {
+            "source": {
+                "data": [
+                    [
+                        null,
+                        "",
+                        "",
+                        "",
+                        "",
+                        null
+                    ],
+                    [
+                        null,
+                        "",
+                        "United States",
+                        "Europe",
+                        "Asia/Australia",
+                        null
+                    ],
+                    [
+                        null,
+                        "2015",
+                        "20",
+                        "25",
+                        "150",
+                        null
+                    ],
+                    [
+                        null,
+                        "2016",
+                        "30",
+                        "35",
+                        "190",
+                        null
+                    ],
+                    [
+                        null,
+                        "2017",
+                        "40",
+                        "45",
+                        "250",
+                        null
+                    ],
+                    [
+                        null,
+                        "2018",
+                        "48",
+                        "55",
+                        "290",
+                        null
+                    ],
+                    [
+                        null,
+                        "",
+                        "",
+                        "",
+                        "",
+                        null
+                    ],
+                    [
+                        null,
+                        "",
+                        "",
+                        "",
+                        "",
+                        null
+                    ],
+                    [
+                        null,
+                        "",
+                        "",
+                        "",
+                        "",
+                        null
+                    ]
+                ],
+                "columns": [
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "maxColNumber": 7
+            }
+        },
+        "series": [
+            {
+                "type": "bar",
+                "columnId": 4,
+                "dataSourceType": "chart",
+                "coordinateIndex": 0,
+                "xAxisIndex": 0,
+                "yAxisIndex": 0,
+                "data": [
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ]
+                ],
+                "itemStyle": {
+                    "color": "hsl(199, 72%, 50%)"
+                },
+                "symbolColor": "white",
+                "selectedData": {
+                    "row": -1,
+                    "column": -1
+                }
+            },
+            {
+                "type": "bar",
+                "columnId": 5,
+                "dataSourceType": "chart",
+                "coordinateIndex": 0,
+                "xAxisIndex": 0,
+                "yAxisIndex": 0,
+                "data": [
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ]
+                ],
+                "itemStyle": {
+                    "color": "hsl(231, 37%, 54%)"
+                },
+                "symbolColor": "white",
+                "selectedData": {
+                    "row": -1,
+                    "column": -1
+                }
+            },
+            {
+                "type": "bar",
+                "columnId": 6,
+                "dataSourceType": "chart",
+                "coordinateIndex": 0,
+                "xAxisIndex": 0,
+                "yAxisIndex": 0,
+                "data": [
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ]
+                ],
+                "itemStyle": {
+                    "color": "hsl(359, 75%, 55%)"
+                },
+                "symbolColor": "white",
+                "selectedData": {
+                    "row": -1,
+                    "column": -1
+                }
+            }
+        ],
+        "coordinates": [
+            {
+                "axes": [
+                    {
+                        "type": "category",
+                        "coordinate": "x",
+                        "show": true,
+                        "dataSource": "auto",
+                        "data": {
+                            "data": [
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ]
+                            ],
+                            "columns": [
+                                2
+                            ],
+                            "maxColNumber": 2
+                        },
+                        "name": "x-axis"
+                    },
+                    {
+                        "type": "value",
+                        "coordinate": "y",
+                        "show": true,
+                        "dataSource": "auto",
+                        "data": {
+                            "data": [
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ],
+                                [
+                                    ""
+                                ]
+                            ],
+                            "columns": [
+                                2
+                            ],
+                            "maxColNumber": 2
+                        },
+                        "name": "y-axis"
+                    }
+                ],
+                "type": "grid",
+                "xPos": {
+                    "start": {
+                        "value": 40
+                    },
+                    "end": {
+                        "value": 80
+                    }
+                },
+                "yPos": {
+                    "start": {
+                        "value": 100
+                    },
+                    "end": {
+                        "value": 40
+                    }
+                },
+                "containLabel": true,
+                "tooltip": {
+                    "show": true,
+                    "trigger": "axis"
+                },
+                "name": "Cartesian"
+            }
+        ],
+        "components": [
+            {
+                "showChartTitle": true,
+                "type": "title",
+                "xPos": {
+                    "position": 40,
+                    "side": "left",
+                    "pixelOrPercent": null
+                },
+                "yPos": {
+                    "position": 20,
+                    "side": null,
+                    "pixelOrPercent": null
+                },
+                "textStyle": {
+                    "fontSize": 24
+                }
+            },
+            {
+                "text": "By region (1,000 units)",
+                "showChartTitle": false,
+                "type": "title",
+                "xPos": {
+                    "position": 40,
+                    "side": "left",
+                    "pixelOrPercent": null
+                },
+                "yPos": {
+                    "position": 50,
+                    "side": null,
+                    "pixelOrPercent": null
+                },
+                "textStyle": {
+                    "fontSize": 14,
+                    "fontWeight": "normal"
+                }
+            },
+            {
+                "text": "IFR WORLD ROBOTICS 2017",
+                "showChartTitle": false,
+                "type": "title",
+                "xPos": {
+                    "position": 40,
+                    "side": "left",
+                    "pixelOrPercent": null
+                },
+                "yPos": {
+                    "position": 10,
+                    "side": "bottom",
+                    "pixelOrPercent": null
+                },
+                "textStyle": {
+                    "fontSize": 14,
+                    "fontWeight": "normal"
+                }
+            },
+            {
+                "show": true,
+                "type": "legend",
+                "xPos": {
+                    "position": 90,
+                    "side": "right",
+                    "pixelOrPercent": null
+                },
+                "yPos": {
+                    "position": 20,
+                    "side": "top",
+                    "pixelOrPercent": null
+                },
+                "orientation": "vertical"
+            }
+        ],
+        "color": [
+            "#c23531",
+            "#2f4554",
+            "#61a0a8",
+            "#d48265",
+            "#91c7ae",
+            "#749f83",
+            "#ca8622",
+            "#bda29a",
+            "#6e7074",
+            "#546570",
+            "#c4ccd3"
+        ]
+    },
+    "echart": {
+        "series": [
+            {
+                "name": "United States",
+                "type": "bar",
+                "data": [
+                    20,
+                    30,
+                    40,
+                    48
+                ],
+                "xAxisIndex": 0,
+                "yAxisIndex": 0,
+                "itemStyle": {
+                    "color": "hsl(199, 72%, 50%)"
+                }
+            },
+            {
+                "name": "Europe",
+                "type": "bar",
+                "data": [
+                    25,
+                    35,
+                    45,
+                    55
+                ],
+                "xAxisIndex": 0,
+                "yAxisIndex": 0,
+                "itemStyle": {
+                    "color": "hsl(231, 37%, 54%)"
+                }
+            },
+            {
+                "name": "Asia/Australia",
+                "type": "bar",
+                "data": [
+                    150,
+                    190,
+                    250,
+                    290
+                ],
+                "xAxisIndex": 0,
+                "yAxisIndex": 0,
+                "itemStyle": {
+                    "color": "hsl(359, 75%, 55%)"
+                }
+            }
+        ],
+        "color": [
+            "#c23531",
+            "#2f4554",
+            "#61a0a8",
+            "#d48265",
+            "#91c7ae",
+            "#749f83",
+            "#ca8622",
+            "#bda29a",
+            "#6e7074",
+            "#546570",
+            "#c4ccd3"
+        ],
+        "tooltip": {
+            "show": true
+        },
+        "grid": [
+            {
+                "containLabel": true,
+                "tooltip": {
+                    "show": true,
+                    "trigger": "axis",
+                    "axisPointer": {
+                        "axis": "x"
+                    }
+                },
+                "left": 40,
+                "right": 80,
+                "top": 100,
+                "bottom": 40
+            }
+        ],
+        "xAxis": [
+            {
+                "type": "category",
+                "show": true,
+                "data": [
+                    "2015",
+                    "2016",
+                    "2017",
+                    "2018"
+                ],
+                "gridIndex": 0
+            }
+        ],
+        "yAxis": [
+            {
+                "type": "value",
+                "show": true,
+                "gridIndex": 0
+            }
+        ],
+        "title": [
+            {
+                "text": "Industrial Robots (Example)",
+                "textStyle": {
+                    "fontSize": 24
+                },
+                "left": 40,
+                "top": 20
+            },
+            {
+                "text": "By region (1,000 units)",
+                "textStyle": {
+                    "fontSize": 14,
+                    "fontWeight": "normal"
+                },
+                "left": 40,
+                "top": 50
+            },
+            {
+                "text": "IFR WORLD ROBOTICS 2017",
+                "textStyle": {
+                    "fontSize": 14,
+                    "fontWeight": "normal"
+                },
+                "left": 40,
+                "bottom": 10
+            }
+        ],
+        "legend": [
+            {
+                "show": true,
+                "orient": "vertical",
+                "right": 90,
+                "top": 20
+            }
+        ]
+    },
+    "options": {
+        "data": {
+            "seriesType": "bar",
+            "manageSeries": true
+        },
+        "series": {
+            "selected": 1
+        },
+        "ribbon": {
+            "selectedTab": 0,
+            "tooltipsEnabled": "1"
+        },
+        "coordinates": {
+            "selected": 0,
+            "axes": {
+                "selected": 1
+            }
+        },
+        "components": {
+            "selected": 1
+        },
+        "view": {
+            "modus": "edit",
+            "activeScreen": "default",
+            "width": 400,
+            "height": 300
+        },
+        "chart": {
+            "editMode": "chart",
+            "theme": "dark"
+        }
+    }
+}

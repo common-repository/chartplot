@@ -1,0 +1,344 @@
+{
+  "chart": {
+    "dataset": {
+      "source": {
+        "data": [
+          [
+            "Eye Color",
+            "count"
+          ],
+          [
+            "brown",
+            "1630"
+          ],
+          [
+            "brown honey",
+            "1147"
+          ],
+          [
+            "green",
+            "574"
+          ],
+          [
+            "hazel",
+            "327"
+          ],
+          [
+            "dark brown",
+            "144"
+          ],
+          [
+            "black",
+            "112"
+          ],
+          [
+            "blue-green",
+            "79"
+          ],
+          [
+            "grey",
+            "40"
+          ],
+          [
+            "amber",
+            "4"
+          ],
+          [
+            ""
+          ]
+        ],
+        "columns": [
+          10,
+          11
+        ],
+        "maxColNumber": 11
+      }
+    },
+    "series": [
+      {
+        "type": "line",
+        "columnId": 11,
+        "dataSourceType": "chart",
+        "coordinateIndex": 0,
+        "xAxisIndex": 0,
+        "yAxisIndex": 0,
+        "data": [
+          [
+            "",
+            ""
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "",
+            ""
+          ]
+        ],
+        "symbolColor": "white",
+        "selectedData": {
+          "row": -1,
+          "column": -1
+        }
+      }
+    ],
+    "coordinates": [
+      {
+        "axes": [
+          {
+            "type": "category",
+            "coordinate": "x",
+            "show": true,
+            "dataSource": "auto",
+            "data": {
+              "data": [
+                [
+                  ""
+                ],
+                [
+                  ""
+                ],
+                [
+                  ""
+                ],
+                [
+                  ""
+                ],
+                [
+                  ""
+                ],
+                [
+                  ""
+                ],
+                [
+                  ""
+                ],
+                [
+                  ""
+                ]
+              ],
+              "columns": [
+                2
+              ],
+              "maxColNumber": 2
+            }
+          },
+          {
+            "type": "value",
+            "coordinate": "y",
+            "show": true,
+            "dataSource": "auto",
+            "data": {
+              "data": [
+                [
+                  ""
+                ],
+                [
+                  ""
+                ],
+                [
+                  ""
+                ],
+                [
+                  ""
+                ],
+                [
+                  ""
+                ],
+                [
+                  ""
+                ],
+                [
+                  ""
+                ],
+                [
+                  ""
+                ]
+              ],
+              "columns": [
+                2
+              ],
+              "maxColNumber": 2
+            }
+          }
+        ],
+        "type": "grid",
+        "xPos": {
+          "start": {
+            "value": 10
+          },
+          "end": {
+            "value": 10
+          }
+        },
+        "yPos": {
+          "start": {
+            "value": 40
+          },
+          "end": {
+            "value": 10
+          }
+        },
+        "containLabel": true,
+        "tooltip": {
+          "show": true,
+          "trigger": "axis"
+        }
+      }
+    ],
+    "components": [
+      {
+        "showChartTitle": true,
+        "type": "title",
+        "xPos": {
+          "position": null,
+          "side": "center",
+          "pixelOrPercent": null
+        },
+        "yPos": {
+          "position": null,
+          "side": null,
+          "pixelOrPercent": null
+        }
+      }
+    ],
+    "color": [
+      "#c23531",
+      "#2f4554",
+      "#61a0a8",
+      "#d48265",
+      "#91c7ae",
+      "#749f83",
+      "#ca8622",
+      "#bda29a",
+      "#6e7074",
+      "#546570",
+      "#c4ccd3"
+    ]
+  },
+  "echart": {
+    "series": [
+      {
+        "name": "count",
+        "type": "line",
+        "data": [
+          1630,
+          1147,
+          574,
+          327,
+          144,
+          112,
+          79,
+          40,
+          4
+        ],
+        "xAxisIndex": 0,
+        "yAxisIndex": 0
+      }
+    ],
+    "color": [
+      "#c23531",
+      "#2f4554",
+      "#61a0a8",
+      "#d48265",
+      "#91c7ae",
+      "#749f83",
+      "#ca8622",
+      "#bda29a",
+      "#6e7074",
+      "#546570",
+      "#c4ccd3"
+    ],
+    "tooltip": {
+      "show": true
+    },
+    "grid": [
+      {
+        "containLabel": true,
+        "tooltip": {
+          "show": true,
+          "trigger": "axis",
+          "axisPointer": {
+            "axis": "x"
+          }
+        },
+        "left": 10,
+        "right": 10,
+        "top": 40,
+        "bottom": 10
+      }
+    ],
+    "xAxis": [
+      {
+        "type": "category",
+        "show": true,
+        "data": [
+          "brown",
+          "brown honey",
+          "green",
+          "hazel",
+          "dark brown",
+          "black",
+          "blue-green",
+          "grey",
+          "amber"
+        ],
+        "gridIndex": 0
+      }
+    ],
+    "yAxis": [
+      {
+        "type": "value",
+        "show": true,
+        "gridIndex": 0
+      }
+    ],
+    "title": [
+      {
+        "text": "Eye color (Example)",
+        "left": "center",
+        "top": "top"
+      }
+    ]
+  },
+  "options": {
+    "data": {
+      "seriesType": "line",
+      "manageSeries": true
+    },
+    "series": {
+      "selected": 0
+    },
+    "ribbon": {
+      "selectedTab": 0,
+      "tooltipsEnabled": "1"
+    },
+    "coordinates": {
+      "selected": 0,
+      "axes": {
+        "selected": 0
+      }
+    },
+    "components": {
+      "selected": 0
+    },
+    "view": {
+      "modus": "preview",
+      "activeScreen": "default",
+      "width": 400,
+      "height": 300
+    },
+    "chart": {
+      "editMode": "chart"
+    }
+  }
+}

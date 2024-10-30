@@ -1,0 +1,1466 @@
+
+$remStep: 0.125;
+
+.editor-form{
+  .form-group{
+    border-bottom: 1px solid $gray-300;
+    padding-bottom: 1rem;
+  }
+}
+
+.grid-holder-300{
+    height: 300px;
+    overflow: hidden;
+}
+
+.card-chart{
+
+  width: 100%;
+  height: 100%;
+  max-width: none;
+
+  .chart-table{
+    width: 100%;
+    height: 100%;
+
+    td{
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      vertical-align: middle;
+      background: $gray-300;
+    }
+
+    .chart-holder{
+      background: white
+    }
+
+  }
+
+  .highlight-hover{
+    position: absolute;
+    box-sizing: content-box;
+    border: 2px solid blue;
+    opacity: 0.2;
+  }
+
+  .highlight-select{
+    position: absolute;
+    box-sizing: content-box;
+    border: 2px solid blue;
+    opacity: 0.8;
+  }
+}
+
+.normal-chart{
+  width: 100%;
+  height: 100%;
+  background: white;
+  box-sizing: border-box;
+}
+
+.checkbox-input{
+  cursor: pointer;
+  padding-top: 0.125rem;
+  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+$toolbarBorderColor: lighten($primary , 12%);
+$ribbonBackground: #f5f5f5;
+
+$buttonLightHover: darken($ribbonBackground, 15%);
+$buttonDarkHover: darken($ribbonBackground, 20%);
+
+$darkButtonLightHover: lighten($toolbarBorderColor, 5%);
+$darkButtonDarkHover: lighten($toolbarBorderColor, 10%);
+
+@mixin button-hover-highlight{
+
+  &:hover{
+    background: $buttonLightHover;
+  }
+
+  &:active{
+    background: $buttonDarkHover;
+    box-shadow: inset 0px 0px 5px darken($buttonDarkHover, 8%);
+    //outline: 1px solid darken($buttonDarkHover, 8%);
+  }
+
+  &.disabled{
+    background: inherit;
+    box-shadow: none;
+  }
+
+}
+
+@mixin dark-button-hover-highlight{
+
+  &:hover{
+    background: $darkButtonLightHover;
+  }
+
+  &:active{
+    background: $darkButtonDarkHover;
+    box-shadow: inset 0px 0px 5px darken($darkButtonDarkHover, 8%);
+    //outline: 1px solid darken($buttonDarkHover, 8%);
+  }
+
+  &.disabled{
+    background: inherit;
+    box-shadow: none;
+  }
+
+}
+
+.chartplot-button{
+  cursor: default;
+  &.selected{
+    background: $buttonLightHover;
+    &:hover{
+      outline: 1px $buttonDarkHover solid;
+    }
+  }
+
+  &.disabled{
+    color: $gray-400;
+    .label{
+      color: $gray-400;
+    }
+  }
+
+}
+
+.dark-chartplot-button{
+  cursor: default;
+  &.selected{
+    background: $toolbarBorderColor;
+    &:hover{
+      outline: 1px $toolbarBorderColor solid;
+    }
+  }
+
+  &.inactive{
+    color: $gray-600;
+    .label{
+      color: $gray-600;
+    }
+  }
+
+  &.disabled{
+    color: $gray-600;
+    .label{
+      color: $gray-600;
+    }
+  }
+
+}
+
+.ribbon-input{
+
+  height: 1.5rem;
+
+  >*{
+    float: left;
+  }
+  &.disabled{
+    .label, .icon{
+      color: $gray-400;
+      background: inherit;
+    }
+  }
+
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+
+.icon{
+  &.selected{
+    background: $buttonLightHover;
+  }
+}
+
+.general-form{
+
+  background: white;
+  border: $gray-400 1px solid;
+  padding: 0.5rem;
+}
+
+.select-list{
+  background: white;
+  border: $gray-400 1px solid;
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-width: 6rem;
+  .list-item{
+    font-size: 0.75rem;
+    cursor: default;
+    width: 100%;
+    display: table;
+    min-width: 4rem;
+    .label{
+      max-width: none;
+
+    }
+    .icon{
+      display: table-cell;
+      font-size: 1rem;
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+      padding-bottom: 0rem;
+      vertical-align: middle;
+    }
+    .label{
+      display: table-cell;
+      vertical-align: middle;
+      height: 1rem;
+      line-height: 1rem;
+    }
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    &:hover{
+      background: $buttonLightHover;
+    }
+  }
+
+
+  .custom-file{
+    font-size: 0.75rem;
+    height: 1.75rem;
+    position: relative;
+    width: auto;
+    display: table;
+
+    .icon{
+      display: table-cell;
+      font-size: 1rem;
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+      padding-bottom: 0rem;
+      vertical-align: middle;
+    }
+
+    label{
+      margin: 0;
+      height: 1.75rem;
+      padding-left: 0.5rem;
+    }
+
+    .label{
+      display: table-cell;
+      vertical-align: middle;
+      min-width: 6rem;
+      line-height: 1rem;
+      margin: 0;
+    }
+
+    &:hover{
+      background: $buttonLightHover;
+    }
+
+  }
+
+}
+
+.content-select-list{
+  border: none;
+  max-height: none;
+  height: 100%;
+
+  li{
+    font-size: 0.75rem;
+    cursor: default;
+    .icon{
+      margin-right: 0.5rem;
+      padding-top: 0rem;
+      padding-bottom: 0rem;
+      height: 1rem;
+      font-size: 1rem;
+      display: inline-block;
+    }
+    overflow: hidden;
+    margin: 0;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    max-height: 2.5rem;
+    white-space: nowrap;
+    &:hover{
+      background: $buttonLightHover;
+    }
+
+    &.selected{
+      background: $buttonLightHover;
+      &:hover{
+        outline: 1px $buttonDarkHover solid;
+      }
+    }
+  }
+
+
+}
+
+.chartplot-editor{
+
+  .card{
+    margin: 0;
+    padding: 0.5rem;
+    .card-body{
+      padding: 1rem;
+    }
+    .card-header{
+      text-align: center;
+    }
+  }
+
+  .left-cell{
+    height: 100%;
+    .card{
+      padding: 0;
+      border-radius: 0;
+      height: 100%;
+    }
+  }
+
+  .intro{
+    font-size: 1rem;
+    p{
+      font-size: 1rem;
+    }
+    width: 100%;
+    height: 100%;
+    .card{
+      margin: 0.5rem;
+      padding: 0;
+      cursor: pointer;
+      background: $gray-200;
+      &:hover{
+        background: white;
+      }
+
+      float: left;
+
+    }
+
+    .nav{
+      font-size: 1rem;
+
+      li{
+        cursor: pointer;
+      }
+
+    }
+
+    .title{
+      padding-top: 2rem;
+      padding-bottom: 0.5rem;
+      text-align: center;
+      .subtitle{
+        font-size: 1.5rem;
+        color: $gray-600;
+      }
+      border-bottom: 1px solid $gray-200;
+    }
+
+    .nav-content{
+      padding-top: 1rem;
+      overflow: auto;
+      height: calc(100% - 2.5rem);
+    }
+  }
+
+  .form-text{
+    font-size: 0.75rem;
+  }
+
+  .input-group-append{
+    .icon{
+      display: block;
+    }
+  }
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .problems{
+    .card{
+      margin: 0;
+    }
+
+    .icon{
+      float: left;
+      margin-right: 1rem;
+    }
+  }
+
+  &.maximized{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100000;
+  }
+
+  .chart-event-catcher{
+    z-index: 100100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .editor-split-container{
+    height: calc(100% - 10rem);
+  }
+
+  .card-chart, .editor-split, .main-split{
+    height: 100%;
+    width: 100%;
+  }
+
+  .ribbon-header{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 2rem;
+    overflow: auto;
+    li{
+      height: 2rem;
+      float: left;
+      padding: 0.25rem 0.5rem 0rem 0.5rem;
+      cursor: pointer;
+
+      &.highlighted{
+        background: darken($primary, 10%);
+      }
+
+      &:hover{
+        background: $toolbarBorderColor;
+        color: white;
+      }
+
+      &.active{
+        background: $ribbonBackground;
+        color: $primary;
+        cursor: auto;
+
+        &.hover{
+          background: $ribbonBackground;
+          color: $primary;
+        }
+      }
+
+    }
+  }
+
+  .tooltip-container{
+    padding: 0.5rem;
+    border: 1px solid $gray-400;
+    font-size: 0.75rem;
+    background: $gray-100;
+    max-width: 500px;
+    max-height: 60vh;
+    overflow: auto;
+
+    p{
+      font-size: 0.75rem;
+    }
+
+    .tooltip-title{
+      margin-bottom: 0.75rem;
+      font-weight: bold;
+    }
+
+    .tooltip-content{
+      ul.bullet{
+        list-style-type: square;
+        list-style-position: outside;
+        margin-left: 0.5rem;
+        margin-top: 0.5rem;
+        li{
+          display: list-item;
+          margin-left: 1rem;
+        }
+      }
+    }
+
+  }
+
+  .help-container{
+    position: relative;
+    .help-menu{
+      box-sizing: border-box;
+      height: 2.5rem;
+      background: lighten($primary, 5%);
+      color: $gray-100;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.5rem;
+    }
+
+    .content{
+      padding: 0.5rem;
+      margin-top: 2.5rem;
+      height: calc(100% - 2.5rem);
+      overflow: auto;
+    }
+    border: 1px solid $gray-800;
+    font-size: 1rem;
+    background: $gray-100;
+    height: 70vh;
+    max-width: 80vw;
+
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+      font-weight: 800;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 1rem;
+    }
+
+    .h1{
+      font-size: 2rem;
+    }
+    .h2{
+      font-size: 1.5rem;
+    }
+    .h3{
+      font-size: 1rem;
+      font-style: italic;
+    }
+  }
+
+  input[type=checkbox]:checked:before{
+    font-size: 1.25rem;
+    margin: -3px 0 0 -4px;
+  }
+
+  .data{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+
+    .table-holder{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+
+  .ribbon-content {
+
+    .checkbox-input{
+      margin-right: 0.25rem;
+    }
+
+    input{
+      height: 1.25rem;
+      width: 4rem;
+      margin: 0.125rem;
+    }
+
+    textarea{
+      height: 3rem;
+      width: 8rem;
+      resize: none;
+    }
+
+    input[type=checkbox]{
+      width: 1rem;
+      height: 1rem;
+    }
+
+
+
+    background: $ribbonBackground;
+    height: 6rem;
+    padding: 0.125rem 0.5rem;
+    overflow: auto;
+
+    .ribbon-row {
+
+      .ribbon-row-item {
+        float: left;
+      }
+
+    }
+
+    .select-list{
+      margin: 0;
+      position: relative;
+      background: white;
+      border: $gray-400 1px solid;
+      height: 4.5rem;
+      overflow-y: auto;
+      overflow-x: hidden;
+      width: 6rem;
+      float: left;
+      white-space: nowrap;
+      li{
+        font-size: 0.75rem;
+        cursor: default;
+        .icon{
+          margin-right: 0.5rem;
+          padding-top: 0rem;
+          padding-bottom: 0rem;
+          height: 1rem;
+          font-size: 1rem;
+          display: inline-block;
+        }
+        overflow: hidden;
+        margin: 0;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        padding-top: 0.125rem;
+        padding-bottom: 0.125rem;
+        max-height: 2.5rem;
+        &:hover{
+          background: $buttonLightHover;
+        }
+
+        &.selected{
+          background: $buttonLightHover;
+          &:hover{
+            outline: 1px $buttonDarkHover solid;
+          }
+        }
+      }
+
+    }
+
+    .divider{
+      float: left;
+      width: 1px;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      border-left: 1px solid $gray-400;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      height: 5.75rem;
+    }
+
+  }
+
+    .content-space{
+      float: left;
+      width: 0.5rem;
+      height: 4.5rem;
+    }
+
+    .triple{
+      height: 4.5rem;
+      float: left;
+
+      .icon-error{
+        color: $red;
+      }
+
+      .top,.middle,.bottom{
+        >*{
+          float: left;
+          margin-right: 0.125rem;
+        }
+        height: 1.5rem;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+      }
+    }
+
+  .double{
+    height: 4.5rem;
+    float: left;
+    text-align: left;
+
+    .icon-error{
+      color: $red;
+    }
+
+    .top,.bottom{
+      >*{
+        float: left;
+        margin-right: 0.125rem;
+      }
+      height: 2.25rem;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+    }
+  }
+
+  .label{
+    max-width: 5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    display: inline-block;
+    font-size: 0.75rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    b{
+      display: inline;
+      white-space: nowrap;
+    }
+  }
+
+  .select-button{
+    font-size: 1rem;
+    text-align: center;
+
+    .icon{
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      font-size: 1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: table-cell;
+      margin: auto;
+    }
+
+    .icon-arrow_drop_down_small_width{
+      width: auto;
+      margin: 0;
+    }
+
+    display: table;
+    *{
+      display: table-cell;
+    }
+
+    .icon-arrow_drop_down_small_width{
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .icon-arrow_drop_down:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    &.disabled{
+      color: $gray-400;
+    }
+  }
+
+  .icon{
+    padding: 0.125rem;
+    height: 1.5rem;
+    display: inline-block;
+  }
+
+    .expanded-list-selection{
+      position: relative;
+      width: 9.25rem;
+
+      .controls{
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid $gray-500;
+
+        &:after{
+          content: "";
+          display: block;
+          clear: both;
+        }
+
+      }
+
+      .triple{
+        height: 1.5rem;
+
+        .top, .bottom, .middle{
+          float: left;
+        }
+
+      }
+
+      .list-selection-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+        border: 1px solid $gray-400;
+        z-index: 1000000;
+
+        .select-list{
+          height: auto;
+          min-width: 10rem;
+          overflow-y: auto;
+          overflow-x: hidden;
+          border: none;
+        }
+
+      }
+    }
+
+    .big-button{
+      display: block;
+      float: left;
+      height: 4.5rem;
+      text-align: center;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+      .icon{
+        padding-top: 0.125rem;
+        padding-bottom: 0.125rem;
+        font-size: 2rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        display: block;
+        margin: auto;
+      }
+
+      .label{
+        color: $gray-800;
+        text-align: center;
+        font-size: 0.75rem;
+        line-height: 0.75rem;
+        padding-top: 0.25rem;
+        height: 2rem;
+        .top{
+          margin-bottom: 0.25rem;
+        }
+      }
+    }
+
+  .middle-button{
+    display: block;
+    float: left;
+    height: 2.25rem;
+    text-align: left;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    .icon{
+      padding-top: 0.125rem;
+      padding-bottom: 0.125rem;
+      font-size: 1rem;
+      width: 1.125rem;
+      height: 1.125rem;
+      display: block;
+    }
+
+    .label{
+      color: $gray-800;
+      text-align: center;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      padding-top: 0.25rem;
+      height: 2rem;
+      .top{
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+
+    .normal-button{
+      display: block;
+      float: left;
+      height: 1.5rem;
+      text-align: center;
+      .icon{
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        font-size: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        display: block;
+        margin: auto;
+        float: left;
+      }
+
+      .label{
+        float: left;
+      }
+
+    }
+
+    .number-input{
+      position: relative;
+      input{
+        padding-right: 0.75rem;
+      }
+
+      &.small-input{
+        input{
+          width: 3rem;
+        }
+      }
+    }
+
+    .add-remove-number{
+      height: 1.25rem;
+      position: absolute;
+      right: 0.25rem;
+      padding-top: 0.125rem;
+      top: 1px;
+      .number-button {
+        @include button-hover-highlight;
+        position: relative;
+        .icon{
+          position: absolute;
+          padding: 0;
+          height: 0.625rem;
+          width: 0.625rem;
+          display: block;
+        }
+        margin: 0;
+        padding: 0;
+        font-size: 0.625rem;
+        height: 0.625rem;
+        width: 0.625rem;
+      }
+    }
+
+    input, input, select, select, textarea{
+      box-shadow: none;
+      border: 1px solid $gray-500;
+      font-size: 0.75rem;
+    }
+
+    .warning{
+      color: $warning;
+    }
+
+    .red, .invalid{
+      color: $red;
+
+      &.disabled{
+        color: lighten($red, 35%)
+      }
+
+    }
+
+    .green{
+      color: $green;
+
+      &.disabled{
+        color: lighten($green, 35%)
+      }
+    }
+
+    .text-select{
+
+      .chartplot-button{
+        background: white;
+      }
+
+      .button-hover-highlight{
+        @include button-hover-highlight;
+      }
+
+      .input-part{
+
+        border: 1px solid $gray-500;
+        margin: 0.125rem;
+        input{
+          border: none;
+          margin: 0;
+        }
+
+        >*{
+          float: left;
+        }
+        .icon{
+          padding: 0;
+          height: 1.25rem;
+        }
+      }
+
+      &.small-input{
+        input{
+          width: 2rem;
+        }
+      }
+
+    }
+
+    .select-big-button{
+      display: block;
+      float: left;
+      height: 4.5rem;
+      text-align: center;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+      text-align: center;
+      .icon{
+        padding-top: 0.125rem;
+        padding-bottom: 0.125rem;
+        font-size: 2rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        display: block;
+        margin: auto;
+      }
+
+      .label{
+        text-align: center;
+        font-size: 0.75rem;
+        line-height: 0.75rem;
+        padding-top: 0.25rem;
+        height: 1rem;
+      }
+
+      .icon-arrow_drop_down_small_width{
+        height: 1rem;
+        width: 1rem;
+        font-size: 1rem;
+        margin: auto;
+        padding: 0;
+      }
+    }
+
+    .section{
+      float: left;
+      height: 5.75rem;
+      .section-content{
+        display: block;
+        height: 4.5rem;
+      }
+
+      .section-footer{
+        line-height: 1.25rem;
+        height: 1.25rem;
+        color: $gray-600;
+        font-style: italic;
+        overflow: hidden;
+        .section-label{
+          float: left;
+          padding-top: 0.125rem;
+          font-size: 0.75rem;
+          text-align: center;
+          height: 1.25rem;
+        }
+        .select-button{
+          float: right;
+          width: 1.25rem;
+          height: 1.25rem;
+          padding: 0;
+          font-size: 1rem;
+          .icon{
+            font-size: 1rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            padding-left: 0;
+            padding-right: 0.125rem;
+            padding-bottom: 0.125rem;
+            padding-top: 0.25rem;
+          }
+        }
+      }
+    }
+
+  .expanded-settings{
+    overflow: auto;
+    max-height: 400px;
+    padding: 0.5rem;
+    border: 1px solid $gray-400;
+    background: $ribbonBackground;
+
+    input{
+      height: 1.25rem;
+      margin: 0.125rem;
+    }
+
+    input[type=checkbox]{
+      width: 1rem;
+      height: 1rem;
+    }
+
+
+    .add-remove-number {
+      top: 0px;
+    }
+
+    .title{
+      font-weight: bold;
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .settings-row{
+      height: 1.5rem;
+      >*{
+        float: left;
+        margin-right: 0.125rem;
+      }
+    }
+  }
+}
+
+
+
+.menu{
+  padding: 0;
+  height: 4rem;
+  background: $primary;
+  box-sizing: content-box;
+  color: $gray-100;
+
+  .ribbon-section-highlight{
+    position: absolute;
+    top: 0;
+    height: 4rem;
+    background: darken($primary, 10%);
+    border-left: solid 1px $gray-600;
+    border-right: solid 1px $gray-600;
+    opacity: 0.7;
+
+    .ribbon-section-highlight-label{
+      color: $gray-300;
+      text-align: center;
+      overflow: hidden;
+      max-height: 1.5rem;
+      padding-top: 0.25rem;
+      white-space: nowrap;
+      margin: auto;
+      .icon{
+        display: inline-block;
+      }
+    }
+  }
+
+  .top-menu{
+    padding-top: 0.25rem;
+    padding-left: 0.25rem;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+  }
+
+  .bottom-menu{
+    height: 2rem;
+    position: absolute;
+    left: 0px;
+    top: 2rem;
+  }
+
+  .menu-table{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    tr, td{
+      margin: 0;
+      padding: 0;
+    }
+
+  }
+
+  .logo-holder{
+    background: $primary;
+    padding: 0rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    height: 1.5rem;
+    float: left;
+    .icon{
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1.5rem;
+    }
+    &:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+
+  #title{
+    font-size: 1rem;
+    display: block;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    float: left;
+    overflow: hidden;
+    max-width: 8rem;
+    white-space: nowrap;
+    height: 1.5rem;
+    text-overflow: ellipsis;
+  }
+
+  #done{
+    margin-right: 1rem;
+    margin-top: 1rem;
+    float: right;
+    display: block;
+  }
+
+
+  .toolbar{
+    margin-left: 0.5rem;
+    // border-top: 1px solid $toolbarBorderColor;
+    // border-bottom: 1px solid $toolbarBorderColor;
+    box-sizing: border-box;
+    float: left;
+    height: 2rem;
+
+    &.right{
+      float: right;
+      margin-right: 0.5rem;
+    }
+
+    .error-button{
+      background-color: $red;
+
+      &.selected{
+        background: lighten($red, 10%);
+      }
+
+      &:hover{
+        background: lighten($red, 10%);
+      }
+
+      &.disabled{
+        background: $primary;
+        &:hover{
+          background: $primary;
+        }
+      }
+    }
+
+  }
+
+  .toolbar-button{
+    margin-left: 0.25rem;
+    height: 1.5rem;
+    padding: 0;
+    border: none;
+    background-color: $primary;
+    float: left;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+
+    span {
+      color: $gray-100;
+      font-size: 1rem;
+      line-height: 1;
+      display: block;
+      height: 1rem;
+    }
+
+
+
+    &:active, &:focus{
+      outline: none;
+    }
+
+    &:hover{
+      background-color: $toolbarBorderColor;
+      color: black;
+    }
+
+    &:active, &.selected{
+      background: lighten($toolbarBorderColor, 5%);
+    }
+
+    &.disabled{
+      background: $primary;
+      span{
+        color: $gray-600;
+      }
+
+      &:active, &:focus, &:hover{
+        background: $primary;
+        span{
+          color: $gray-600;
+        }
+      }
+
+    }
+
+  }
+}
+
+.bg-white-col{
+  background: white;
+}
+
+.button-hover-highlight{
+  @include button-hover-highlight;
+}
+
+
+.dark-button-hover-highlight{
+  @include dark-button-hover-highlight;
+}
+
+
+.chartplot-select-container{
+  position: fixed;
+  z-index: 200000;
+  left: 2rem;
+  top: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  padding: 1rem;
+  max-width: none;
+  max-height: none;
+  background-color: $gray-100;
+  overflow: auto;
+  .card-body{
+    padding: 0;
+  }
+
+  .table-card{
+    display: block;
+    margin: 0;
+    width: 100%;
+    background: white;
+
+    .table{
+      margin: 0;
+    }
+  }
+}
+
+.table-control{
+  font-size: 1rem;
+  padding: 0.5rem;
+  .pages{
+    >*{
+      margin-right: 0.5rem;
+    }
+    float: left;
+  }
+
+  .search-info{
+    float: left;
+    margin-left: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .search-container{
+    float: right;
+    input{
+      width: 13rem;
+    }
+
+    .label{
+      margin-left: 0.5rem;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+.close-holder{
+  float: right;
+}
+
+.table-control:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.chartplot-selection-options{
+  margin-bottom: 1rem;
+  width: auto;
+  height: auto;
+
+  .checkbox-input{
+    margin-right: 0.25rem;
+  }
+
+  input{
+    height: 1.25rem;
+    width: 4rem;
+    margin: 0.125rem;
+  }
+
+  input[type=checkbox]{
+    width: 1rem;
+    height: 1rem;
+  }
+
+}
+
+.chartplot-selection-options:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.chartplot-row{
+
+  cursor: pointer;
+}
+
+.ribbon-input-textarea{
+  height: 2.75rem;
+
+  &.large{
+    textarea{
+      width: 12rem;
+    }
+  }
+
+}
+
+.input-error{
+  input{
+    border-color: $red;
+  }
+}
+
+.link-and-table{
+  background: #dee2e6;
+  padding: 0.25rem;
+  height: 100%;
+  position: relative;
+
+
+  .table-content{
+    height: calc(100% - 2rem);
+
+    textarea{
+      width: 100%;
+      height: 100%;
+      resize: none;
+    }
+
+  }
+}
+
+.link-content{
+  padding: 0;
+  height: 1.75rem;
+  .ribbon-input{
+
+    .input-part{
+      width: 100%;
+
+      input{
+        width: 100%;
+        resize: none;
+        margin: 0;
+      }
+
+    }
+
+  }
+}
+
+.center-text-info{
+
+}

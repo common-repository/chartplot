@@ -1,0 +1,7 @@
+i.mce-i-chartplot-icon:before {
+    content: "\f125";
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: 400 20px/1 iconfont;
+    vertical-align: top;
+}

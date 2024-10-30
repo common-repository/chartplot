@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "declaration": false,
+    "alwaysStrict": true,
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    "esModuleInterop": false,
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "types": [
+      "webpack-env"
+    ]
+  },
+  "exclude": ["node_modules"]
+}

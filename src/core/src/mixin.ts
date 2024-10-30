@@ -1,0 +1,40 @@
+/**
+ * Chartplot lets you create charts am embed them into your websites. See chartplot.com/wordpress for more information.
+ *
+ * Copyright 2016-2019 Christoph Rodak <christoph@rodak.li>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>
+ *
+ */
+ 
+export function copyClass<E extends Constructor<{}>>(clazz: E): E{
+    class B extends clazz{
+        
+    }
+    
+    return B;
+}
+
+export type Constructor<T> = new (...args: any[]) => T;
+
+export interface IMixinFactory{
+    
+    mixin<E>(e: E): void;
+    after(mixin: any): IMixinFactory;
+    before(mixin: any): IMixinFactory;
+    extend(method: string, e: (m: any) => any): any;
+    init(f: () => void): any;
+    construct<E extends Constructor<any>>(constructor: Function): E;
+    
+}

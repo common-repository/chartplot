@@ -1,0 +1,9 @@
+.chartplot-main{
+
+  div{
+    box-sizing: border-box;
+  }
+  @import "./bootstrap/bootstrap";
+  @import "custom/variables";
+  @import "custom/all";
+}

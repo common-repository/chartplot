@@ -1,0 +1,29 @@
+# Licenses #
+
+## GPL 3 License ##
+
+All files, including php, images, css and javascript files, are licensed under the GPL 3 license, unless mentioned
+otherwise. Sources can be found in the "src" folder or in the github pages listed below.
+
+Other assets using GPL3:
+
+* Freemius SDK: https://github.com/Freemius/wordpress-sdk
+
+## Permissive open source licenses ##
+
+Following assets are used by this plugin and licensed under a permissive open source license, like MIT, Apache or BSD.
+
+* Echarts: https://github.com/apache/incubator-echarts
+* Handsontable: https://github.com/handsontable/handsontable
+* Axios: https://github.com/axios/axios
+* Promise-polyfill: https://www.npmjs.com/package/promise-polyfill
+* Popper: https://popper.js.org/
+* FileSaver: https://github.com/eligrey/FileSaver.js
+* SheetJS: https://github.com/SheetJS/js-xlsx
+* SplitJs: https://github.com/nathancahill/split
+* Bootstrap: https://getbootstrap.com/
+* Icomoon icons (Free icons only): https://icomoon.io
+* tslib: https://github.com/Microsoft/tslib
+
+Note that some of those assets are defined as dependencies in "src/package.json", while the others are
+directly included in the "js", "css" and "img" folders in minified form.
